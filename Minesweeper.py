@@ -209,10 +209,8 @@ def gameLoop():
             drawText("Ти виграв!", 50)
             drawText("R для рестарта", 35, 50)
         s = str(t // 15)
-        screen_text = font.SysFont("Calibri", 50).render(f"Час в гри: {s} cек,", True, (0, 0, 0))
+        screen_text = font.SysFont("Calibri", 50).render(f"Час в гри: {s} cек, кiлькiсть мiн: {mineLeft.__str__()}", True, (0, 0, 0))
         gameDisplay.blit(screen_text, (border, border))
-        screen_text = font.SysFont("Calibri", 50).render(f" кiлькiсть мiн: {mineLeft.__str__()}", True, (0, 0, 0))
-        gameDisplay.blit(screen_text, (display_width - border - 340, border))
 
         display.update()
 
